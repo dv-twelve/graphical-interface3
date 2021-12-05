@@ -1,0 +1,44 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace windowsform
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+             
+            
+            string x = textBox1.Text;
+            int X = Convert.ToInt32(x);
+            string y = textBox2.Text;
+            int Y = Convert.ToInt32(x);
+
+                int z = max(X, 2 * Y - X) + max(5 * X + 3 * Y, Y);
+                textBox3.Text = Convert.ToString(z);
+            
+
+             int max(int p0, int p1)
+            {
+                return p0 > p1 ? p0 : p1;
+            }
+           
+        }
+
+
+    }
+}
+
